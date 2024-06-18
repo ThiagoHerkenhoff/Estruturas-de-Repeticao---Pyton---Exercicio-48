@@ -1,0 +1,16 @@
+# 48 - Faça um programa que some os termos de valor par da sequência Fibonacci, cujos valores não
+# ultrapassem quatro milhões.
+
+# Inicializa os dois primeiros números da sequência de Fibonacci
+a, b = 1, 1
+
+# Inicializa a soma dos termos pares
+soma = 0
+
+# Gera os números da sequência de Fibonacci e soma os valores pares
+while a <= 4000000:
+    if a % 2 == 0:  # Verifica se o número é par
+        soma += a
+    a, b = b, a + b  # Calcula o próximo número da sequência
+
+print("A soma dos termos de valor par da sequência Fibonacci até 4 milhões é:", soma)
